@@ -1,0 +1,20 @@
+-DONE Create virtual environment, install django and create project
+-DONE Base page / templates
+    -DONE Create app for pages
+    -DONE Create base template
+    -DONE Create front page
+    -DONE Create about page
+-Authentication
+    -DONE Create database model for userprofiles
+    -DONE Make it possible to sing up
+    -DONE Make it possible to log in
+    -DONE Make it possible to log out
+-DONE Simple dashboard
+-Create new leads
+-Change and delete leads
+-Convert leads to clients
+-Change and delete clients
+-Implement solution for teams
+-Implement a payment solution / Monthly recurring payments
+-Deploy
+
