@@ -10,8 +10,13 @@
     -DONE Make it possible to log in
     -DONE Make it possible to log out
 -DONE Simple dashboard
--Create new leads
--Change and delete leads
+-DONE Create new leads
+    -DONE New django app
+    -DONE Database models
+    -DONE Views/Forms for leads
+    -DONE List out leads
+    -DONE Views detail page of leads
+-DONE Change and delete leads
 -Convert leads to clients
 -Change and delete clients
 -Implement solution for teams
