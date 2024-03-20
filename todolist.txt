@@ -17,9 +17,16 @@
     -DONE List out leads
     -DONE Views detail page of leads
 -DONE Change and delete leads
--Convert leads to clients
--Change and delete clients
+-DONE Convert leads to clients
+-DONE Show a list of clients
+-DONE Show a detail page of client
+-DONE Add clients
+-DONE Change and delete clients
 -Implement solution for teams
+    -Create teams app
+    -Model for teams
+    -Create new teams
+    -You need to be a member of a teams
 -Implement a payment solution / Monthly recurring payments
 -Deploy
 
