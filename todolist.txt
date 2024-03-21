@@ -4,7 +4,7 @@
     -DONE Create base template
     -DONE Create front page
     -DONE Create about page
--Authentication
+-DONE Authentication
     -DONE Create database model for userprofiles
     -DONE Make it possible to sing up
     -DONE Make it possible to log in
@@ -22,11 +22,15 @@
 -DONE Show a detail page of client
 -DONE Add clients
 -DONE Change and delete clients
--Implement solution for teams
-    -Create teams app
-    -Model for teams
-    -Create new teams
-    -You need to be a member of a teams
+-DONE Implement solution for teams
+    -DONE Create teams app
+    -DONE Model for teams
+    -DONE When you create a lead, make sure team is set
+    -DONE When you create a client, make sure team is set
+    -DONE If you're not a member of a team, create one
+    -DONE If you're the owner, make it possible to edit team
+    -DONE Limit number of leads
+    -DONE Limit number of clients
 -Implement a payment solution / Monthly recurring payments
 -Deploy
 

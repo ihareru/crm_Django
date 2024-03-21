@@ -5,6 +5,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import AddClientForm
 from .models import Client
 
+from team.models import Team
+
 
 @login_required
 def clients_list(request):
@@ -26,13 +28,18 @@ def clients_detail(request, pk):
 
 @login_required
 def clients_add(request):
+    team = Team.objects.filter(created_by=request.user)[0]
+
     if request.method == 'POST':
         form = AddClientForm(request.POST)
 
         if form.is_valid():
-            lead = form.save(commit=False)
-            lead.created_by = request.user
-            lead.save()
+            team = Team.objects.filter(created_by=request.user)[0]
+
+            client = form.save(commit=False)
+            client.created_by = request.user
+            client.team = team
+            client.save()
 
             messages.success(request, 'Клиент создан.')
 
@@ -41,7 +48,8 @@ def clients_add(request):
         form = AddClientForm()
 
     return render(request, 'client/clients_add.html', {
-        'form': form
+        'form': form,
+        'team': team
     })
 
 
