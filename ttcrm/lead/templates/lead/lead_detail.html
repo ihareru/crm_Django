@@ -25,12 +25,16 @@
 
         <hr class="my-4">
 
-        <a href="{% url 'leads_convert' lead.id %}" class="py-2 px-4 rounded-xl bg-blue-500 text-white">Преобразовать в клиента</a>
-        <a href="{% url 'leads_edit' lead.id %}" class="py-2 px-4 rounded-xl bg-teal-500 text-white">Изменить</a>
-        <a href="{% url 'leads_delete' lead.id %}" class="py-2 px-4 rounded-xl bg-red-500 text-white">Удалить</a>
+        <form id="lead_delete_form" method="post" action="{% url 'leads:delete' lead.id %}">
+            {% csrf_token %}
+        </form>
+
+        <a href="{% url 'leads:convert' lead.id %}" class="py-2 px-4 rounded-xl bg-blue-500 text-white">Преобразовать в клиента</a>
+        <a href="{% url 'leads:edit' lead.id %}" class="py-2 px-4 rounded-xl bg-teal-500 text-white">Изменить</a>
+        <a href="#" onclick="document.getElementById('lead_delete_form').submit();" class="py-2 px-4 rounded-xl bg-red-500 text-white">Удалить</a>
 
         <hr class="my-4">
 
-        <a href="{% url 'leads_list' %}">Вернуться к списку Лидов</a>
+        <a href="{% url 'leads:list' %}">Вернуться к списку Лидов</a>
     </div>
 {% endblock %}

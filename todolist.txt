@@ -31,6 +31,20 @@
     -DONE If you're the owner, make it possible to edit team
     -DONE Limit number of leads
     -DONE Limit number of clients
+-DONE Refactoring
+    -DONE Install Tailwind instead of using the CDN
+    -DONE Add name space to all of the adds
+    -DONE Replace the leads list with a class based view
+    -DONE Replace the leads detail with a class based view
+    -DONE Replace the leads delete with a class based view
+    -DONE Replace the leads edit with a class based view
+    -DONE Replace the leads add with a class based view
+        -DONE And give it a better name
+    -DONE Replace the leads convert with a class based view
+-Export information (leads, clients)
+-Communicate with eachother?
+-Add comments and similar to leads and clients
+-Upload files to leads and clients
 -Implement a payment solution / Monthly recurring payments
 -Deploy
 
