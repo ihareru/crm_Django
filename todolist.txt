@@ -41,10 +41,10 @@
     -DONE Replace the leads add with a class based view
         -DONE And give it a better name
     -DONE Replace the leads convert with a class based view
--Export information (leads, clients)
+-DONE Add comments and similar to leads and clients
+-DONE Upload files ti leads and clients
+-DONE Export information (leads, clients)
 -Communicate with eachother?
--Add comments and similar to leads and clients
--Upload files to leads and clients
 -Implement a payment solution / Monthly recurring payments
 -Deploy
 
