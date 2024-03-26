@@ -5,7 +5,12 @@
     <h1 class="mb-6 text-xl">Мой аккаунт</h1>
 
     <p class="mb-2">
-        <strong>Пользователь: </strong>{{ request.user.username }}
+        <strong>Пользователь: </strong>
+        {% if request.user.first_name or request.user.last_name %}
+            {{ request.user.first_name }} {{ request.user.last_name }}
+        {% else %}
+            {{ request.user.username }}
+        {% endif %}
     </p>
 
     <p class="mb-2">

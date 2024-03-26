@@ -14,6 +14,7 @@ class AddCommentForm(forms.ModelForm):
         model = Comment
         fields = ('content',)
 
+
 class AddFileForm(forms.ModelForm):
     class Meta:
         model = LeadFile

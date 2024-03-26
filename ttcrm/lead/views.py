@@ -13,7 +13,6 @@ from .forms import AddCommentForm, AddFileForm
 from .models import Lead
 
 from client.models import Client, Comment as ClientComment
-from team.models import Team
 
 
 @login_required
@@ -26,10 +25,10 @@ def leads_export(request):
     )
 
     writer = csv.writer(response)
-    writer.writerow(['Лид', 'Описание', 'Дата создания', 'Автор'])
+    writer.writerow(['Лид', 'Контактное лицо', 'Телефон', 'e-mail', 'Адрес', 'Описание', 'Дата создания', 'Автор'])
 
     for lead in leads:
-        writer.writerow([lead.name, lead.description, lead.created_at, lead.created_by])
+        writer.writerow([lead.name, lead.contact_person, lead.phone, lead.email, lead.address, lead.description, lead.created_at, lead.created_by])
 
     return response
 
@@ -74,7 +73,7 @@ class LeadDeleteView(LoginRequiredMixin, DeleteView):
 
 class LeadUpdateView(LoginRequiredMixin, UpdateView):
     model = Lead
-    fields = ('name', 'email', 'description', 'priority', 'status',)
+    fields = ('name', 'contact_person', 'phone', 'email', 'address', 'description', 'priority', 'status',)
     success_url = reverse_lazy('leads:list')
 
     def get_context_data(self, **kwargs):
@@ -91,7 +90,7 @@ class LeadUpdateView(LoginRequiredMixin, UpdateView):
 
 class LeadCreateView(LoginRequiredMixin, CreateView):
     model = Lead
-    fields = ('name', 'email', 'description', 'priority', 'status',)
+    fields = ('name', 'contact_person', 'phone', 'email', 'address', 'description', 'priority', 'status',)
     success_url = reverse_lazy('leads:list')
 
     def get_context_data(self, **kwargs):

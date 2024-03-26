@@ -6,9 +6,26 @@
     <div class="py-6 px-6">
         <h1 class="mb-4 text-xl">{{ lead.name }}</h1>
 
+        {% if lead.contact_person or lead.phone or lead.address %}
+            <div class="mb-6">
+                <p class="font-semibold">Контакты:</p>
+                {% if lead.contact_person %}
+                    <p class="">Контактное лицо: {{ lead.contact_person }}</p>
+                {% endif %}
+                {% if lead.phone %}
+                    <p class="mb-2">Телефон: {{ lead.phone }}</p>
+                {% endif %}
+                {% if lead.address %}
+                    <p class="">Адрес: {{ lead.address }}</p>
+                {% endif %}
+            </div>
+        {% endif %}
+
         {% if lead.description %}
-            <p class="font-semibold">Описание</p>
-            <p class="mb-2">{{ lead.description }}</p>
+            <div class="mb-6">
+                <p class="font-semibold">Описание</p>
+                <p class="mb-2">{{ lead.description }}</p>
+            </div>
         {% endif %}
 
         <p class="font-semibold">Приоритет</p>
@@ -40,7 +57,7 @@
         <div class="space-y-4">
             {% for comment in lead.comments.all %}
                 <div class="bg-gray-200 mb-2 p-6 rounded-xl">
-                    <p class="mb-2"><strong>{{ comment.created_by }}</strong> @ {{ comment.created_at }}</p>
+                    <p class="mb-2"><strong>{{ comment.created_by.first_name }} {{ comment.created_by.last_name }}</strong> @ {{ comment.created_at }}</p>
                     {{ comment.content }}
                 </div>
             {% endfor %}

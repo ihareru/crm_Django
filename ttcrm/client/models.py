@@ -7,7 +7,10 @@ from team.models import Team
 class Client(models.Model):
     team = models.ForeignKey(Team, related_name='clients', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=255, null=True)
     email = models.EmailField()
+    address = models.CharField(max_length=255, null=True)
+    contact_person = models.CharField(max_length=255, null=True)
     description = models.TextField(blank=True, null=True)
     created_by = models.ForeignKey(User, related_name='clients', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
