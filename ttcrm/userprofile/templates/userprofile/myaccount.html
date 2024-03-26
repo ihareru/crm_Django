@@ -9,10 +9,14 @@
     </p>
 
     <p class="mb-2">
-        <strong>Команда: </strong>{{ team.name }}
+        {% if active_team %}
+            <strong>Команда: </strong><a href="{% url 'team:detail' active_team.id %}">{{ active_team.name }}</a>
 
-        {% if team.created_by == request.user %}
-            <a href="{% url 'team:edit' team.id %}"> (Редактировать)</a>
+            {% if active_team.created_by == request.user %}
+                <a href="{% url 'team:edit' active_team.id %}"> (Редактировать)</a>
+            {% endif %}
+        {% else %}
+            <a href="{% url 'team:list' %}">Выбрать команду</a>
         {% endif %}
     </p>
 
