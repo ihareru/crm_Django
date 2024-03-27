@@ -149,7 +149,10 @@ class ConvertToClientView(LoginRequiredMixin, View):
 
         client = Client.objects.create(
             name=lead.name,
+            contact_person=lead.contact_person,
+            phone=lead.phone,
             email=lead.email,
+            address=lead.address,
             description=lead.description,
             created_by=request.user,
             team=self.request.user.userprofile.active_team,
@@ -164,10 +167,10 @@ class ConvertToClientView(LoginRequiredMixin, View):
 
         for comment in comments:
             ClientComment.objects.create(
-                client = client,
-                content = comment.content,
-                created_by = comment.created_by,
-                team = team
+                client=client,
+                content=comment.content,
+                created_by=comment.created_by,
+                team=team
             )
 
         # Show message and redirect

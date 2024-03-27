@@ -5,5 +5,13 @@ def index(request):
     return render(request, 'core/index.html')
 
 
-def about(request):
-    return render(request, 'core/about.html')
+def contacts(request):
+    return render(request, 'core/contacts.html')
+
+
+def mail(request):
+    return render(request, 'core/mail.html')
+
+
+def chat(request):
+    return render(request, 'core/chat.html')
