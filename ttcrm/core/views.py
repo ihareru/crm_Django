@@ -15,3 +15,7 @@ def mail(request):
 
 def chat(request):
     return render(request, 'core/chat.html')
+
+
+def phone(request):
+    return render(request, 'core/phone.html')

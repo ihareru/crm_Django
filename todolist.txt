@@ -53,7 +53,17 @@
 -DONE Make sure the team does't need to have a plan (then automatically free)
 -DONE Add extra fiend to userprofile to keep track of active team
 -DONE Make it possible to switch team
--Make sure every hardcoded team selector is replaced
--Implement a payment solution / Monthly recurring payments
+-DONE Make sure every hardcoded team selector is replaced
+-Grouping clients by industry
+-Make it possible for the general manager to see and manage all the leads
+-Add the possibility of communication (local chat)
+-Add an email client
+-Add internal contacts
+-Make it possible to make calls from the app
+    -Make it possible to record who was called and the time of the call
+-Integration with 1C
+    -Add parsing of created orders from 1C
+    -Add parsing of payment receipt
+-Make it possible to connect using certificates or keys
+-Transfer the database to PostgreSQL
 -Deploy
-

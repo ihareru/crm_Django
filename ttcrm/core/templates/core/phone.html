@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Корпоративная почта{% endblock %}
+
+{% block content %}
+<style>
+    html, body
+{
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+.div_center {
+    position:relative;
+    height: 79%;
+    width:100%;
+}
+.img_center {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+</style>
+<div class="div_center">
+    <img class="img_center" src="../media/phone.png">
+</div>
+{% endblock %}
